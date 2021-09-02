@@ -29,11 +29,14 @@ namespace MouseJockey
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.playBack1Control = new System.Windows.Forms.Panel();
+            this.grandMasterControl = new System.Windows.Forms.Panel();
+            this.grandMasterHold = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +52,7 @@ namespace MouseJockey
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(638, 12);
+            this.button2.Location = new System.Drawing.Point(168, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 46);
             this.button2.TabIndex = 1;
@@ -63,7 +66,7 @@ namespace MouseJockey
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(12, 1156);
+            this.radioButton1.Location = new System.Drawing.Point(602, 1988);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(27, 26);
             this.radioButton1.TabIndex = 2;
@@ -73,34 +76,62 @@ namespace MouseJockey
             // trackBar1
             // 
             this.trackBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.trackBar1.Location = new System.Drawing.Point(427, 176);
+            this.trackBar1.BackColor = System.Drawing.SystemColors.Control;
+            this.trackBar1.Location = new System.Drawing.Point(758, 1720);
             this.trackBar1.Maximum = 255;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(90, 946);
+            this.trackBar1.Size = new System.Drawing.Size(90, 202);
             this.trackBar1.TabIndex = 3;
             // 
-            // vScrollBar1
+            // playBack1Control
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(699, 164);
-            this.vScrollBar1.Maximum = 255;
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(68, 946);
-            this.vScrollBar1.TabIndex = 4;
+            this.playBack1Control.BackColor = System.Drawing.Color.White;
+            this.playBack1Control.Location = new System.Drawing.Point(617, 1788);
+            this.playBack1Control.Name = "playBack1Control";
+            this.playBack1Control.Size = new System.Drawing.Size(50, 159);
+            this.playBack1Control.TabIndex = 4;
+            // 
+            // grandMasterControl
+            // 
+            this.grandMasterControl.BackColor = System.Drawing.Color.White;
+            this.grandMasterControl.Location = new System.Drawing.Point(45, 1788);
+            this.grandMasterControl.Name = "grandMasterControl";
+            this.grandMasterControl.Size = new System.Drawing.Size(50, 159);
+            this.grandMasterControl.TabIndex = 6;
+            // 
+            // grandMasterHold
+            // 
+            this.grandMasterHold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.grandMasterHold.AutoSize = true;
+            this.grandMasterHold.Checked = true;
+            this.grandMasterHold.Enabled = false;
+            this.grandMasterHold.Location = new System.Drawing.Point(30, 1988);
+            this.grandMasterHold.Name = "grandMasterHold";
+            this.grandMasterHold.Size = new System.Drawing.Size(27, 26);
+            this.grandMasterHold.TabIndex = 5;
+            this.grandMasterHold.TabStop = true;
+            this.grandMasterHold.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1944, 1194);
-            this.Controls.Add(this.vScrollBar1);
+            // this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = Properties.Resources.BackgroundImage;
+            this.CausesValidation = false;
+            this.ClientSize = new System.Drawing.Size(3394, 2036);
+            this.Controls.Add(this.grandMasterControl);
+            this.Controls.Add(this.grandMasterHold);
+            this.Controls.Add(this.playBack1Control);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,7 +144,9 @@ namespace MouseJockey
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.Panel playBack1Control;
+        private System.Windows.Forms.Panel grandMasterControl;
+        private System.Windows.Forms.RadioButton grandMasterHold;
     }
 }
 
