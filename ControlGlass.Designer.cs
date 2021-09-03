@@ -1,7 +1,9 @@
 ﻿
+using System.Windows.Forms;
+
 namespace MouseJockey
 {
-    partial class Form1
+    partial class ControlGlass
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +31,6 @@ namespace MouseJockey
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -86,6 +87,7 @@ namespace MouseJockey
             // 
             // playBack1Control
             // 
+            this.playBack1Control.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.playBack1Control.BackColor = System.Drawing.Color.White;
             this.playBack1Control.Location = new System.Drawing.Point(617, 1788);
             this.playBack1Control.Name = "playBack1Control";
@@ -94,6 +96,7 @@ namespace MouseJockey
             // 
             // grandMasterControl
             // 
+            this.grandMasterControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.grandMasterControl.BackColor = System.Drawing.Color.White;
             this.grandMasterControl.Location = new System.Drawing.Point(45, 1788);
             this.grandMasterControl.Name = "grandMasterControl";
@@ -113,12 +116,11 @@ namespace MouseJockey
             this.grandMasterHold.TabStop = true;
             this.grandMasterHold.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // ControlGlass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            // this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImage = Properties.Resources.BackgroundImage;
+            this.BackgroundImage = global::MouseJockey.Properties.Resources.BackgroundImage;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(3394, 2036);
             this.Controls.Add(this.grandMasterControl);
@@ -129,9 +131,10 @@ namespace MouseJockey
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ControlGlass";
+            this.Text = "ControlGlass";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,13 +143,13 @@ namespace MouseJockey
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Panel playBack1Control;
-        private System.Windows.Forms.Panel grandMasterControl;
-        private System.Windows.Forms.RadioButton grandMasterHold;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.RadioButton radioButton1;
+        public System.Windows.Forms.TrackBar trackBar1;
+        public System.Windows.Forms.Panel playBack1Control;
+        public System.Windows.Forms.Panel grandMasterControl;
+        public System.Windows.Forms.RadioButton grandMasterHold;
     }
 }
 

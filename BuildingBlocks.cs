@@ -49,6 +49,10 @@ namespace MouseJockey
         }
 
         // #pragma warning restore 649
+        public static Point CentrePointOfControl(Control control)
+        {
+            return new Point(control.Left + (control.Width / 2), control.Top + (control.Height / 2));
+        }
 
         public static async void LeftMouseClick(Point point, int pressLength = 100)
         {
